@@ -63,6 +63,6 @@ docker-compose exec web python manage.py collectstatic --no-input
 
 ## Проект доступен по адресам:
 
-* REST API http://<ваш_сервер>/api/v1/
+* REST API http://158./api/v1/
 * ReDoc http://<ваш_сервер>/redoc/
 * Администрирование Django http://<ваш_сервер>/admin/
