@@ -53,7 +53,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
-          port: ${{ secrets.SSH_PORT }}
+          port: 22
           script: |
             sudo docker-compose stop
             sudo docker-compose rm web
