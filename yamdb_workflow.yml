@@ -50,7 +50,6 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.SSH_USER }}
   send_message:
     name: Send Telegram message
     runs-on: ubuntu-latest
