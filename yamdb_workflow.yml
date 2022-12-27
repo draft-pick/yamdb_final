@@ -52,7 +52,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          passphrase: ${{ secrets.PASSPHRASE }}
   send_message:
     name: Send Telegram message
     runs-on: ubuntu-latest
