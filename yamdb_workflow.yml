@@ -49,7 +49,7 @@ jobs:
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }}
+          host: 158.160.22.242
   send_message:
     name: Send Telegram message
     runs-on: ubuntu-latest
