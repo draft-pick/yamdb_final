@@ -50,7 +50,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: 158.160.9.121
-          username: draftpick
+          username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: Lapka2013
           port: 22
