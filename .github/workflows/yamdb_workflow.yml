@@ -54,7 +54,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           port: ${{ secrets.SSH_PORT }}
-          script: |
+#          script: |
 #            sudo docker-compose stop
 #            sudo docker-compose rm web
 #            sudo docker image pull ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
