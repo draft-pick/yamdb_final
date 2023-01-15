@@ -65,7 +65,7 @@ jobs:
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
             echo SECRET_KEY="${{ secrets.SECRET_KEY }}" >> .env
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
+            sudo docker pull draftpick/yamdb_final:latest:latest 
             sudo docker-compose up -d
   send_message:
     name: Send Telegram message
