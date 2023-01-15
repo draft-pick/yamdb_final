@@ -40,7 +40,7 @@ jobs:
         with:
           push: true
           file: api_yamdb/Dockerfile
-          tags: ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
+          tags: draftpick/yamdb_final:latest
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
@@ -65,7 +65,7 @@ jobs:
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
             echo SECRET_KEY="${{ secrets.SECRET_KEY }}" >> .env
-            sudo docker pull draftpick/yamdb_final:latest:latest          
+            sudo docker pull draftpick/yamdb_final:latest          
             sudo docker-compose up -d
   send_message:
     name: Send Telegram message
