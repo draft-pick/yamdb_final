@@ -8,8 +8,10 @@ services:
       - ./.env
   web:
     image: draftpick/api_yamdb_docker:v1
-    build: ../api_yamdb
     restart: always
+    volumes:
+      - static_value:/app/static/
+      - media_value:/app/media/
     depends_on:
       - db
     env_file:
@@ -25,7 +27,3 @@ services:
 
     depends_on:
       - web
-
-volumes:
-  static_value:
-  media_value:
