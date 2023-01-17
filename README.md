@@ -22,13 +22,13 @@ https://github.com/draf-pick/yamdb_final/actions/workflows/yamdb_workflow.yml/ba
 1. Склонируйте репозиторий.
 
 ```
-git clone https://github.com/draft-pick/infra_sp2.git
+git clone https://github.com/draft-pick/yamdb_final.git
 ```
 
 2. Перейдити в папку infra и запустите docker-compose.yaml (при установленном и запущенном Docker)
 
 ```
-cd infra_sp2/infra
+cd yamdb_final/infra
 ```
 
 ```
@@ -38,19 +38,19 @@ docker-compose up
 3. Для пересборки контейнеров выполните команду:
 
 ```
-docker-compose up -d --build
+sudo docker-compose up -d --build
 ```
 
 4. В контейнере web выполните миграции:
 
 ```
-docker-compose exec web python manage.py migrate
+sudo docker-compose exec web python manage.py migrate
 ```
 
 5. Создатйте суперпользователя:
 
 ```
-docker-compose exec web python manage.py createsuperuser
+sudo docker-compose exec web python manage.py createsuperuser
 ```
 
 6. Соберите статику:
@@ -59,10 +59,10 @@ docker-compose exec web python manage.py createsuperuser
 docker-compose exec web python manage.py collectstatic --no-input
 ```
 
-Проект запущен и доступен по адресу: [localhost](http://localhost:81/admin/)
+Проект запущен и доступен по адресу: http://51.250.30.76/
 
 ## Проект доступен по адресам:
 
-* REST API http://158./api/v1/
-* ReDoc http://<ваш_сервер>/redoc/
-* Администрирование Django http://<ваш_сервер>/admin/
+* REST API http://51.250.30.76//api/v1/
+* Документация http://http://51.250.30.76//redoc/
+* Администрирование Django http://http://51.250.30.76//admin/
